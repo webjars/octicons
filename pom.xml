@@ -14,7 +14,7 @@
     <groupId>org.webjars</groupId>
     <artifactId>octicons</artifactId>
     <version>2.0.1-SNAPSHOT</version>
-    <name>octicons</name>
+    <name>Octicons</name>
     <description>WebJar for Octicons</description>
     <url>http://webjars.org</url>
 
@@ -25,12 +25,7 @@
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
         <requirejs>
             {
-                "paths": {
-                    "octicons": "octicons"
-                },
-                "shim": {
-                    "octicons": []
-                }
+                "paths": { "octicons": "octicons" }
             }
         </requirejs>
     </properties>
