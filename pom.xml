@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>octicons</artifactId>
-    <version>3.1.0-SNAPSHOT</version>
+    <version>3.1.0</version>
     <name>Octicons</name>
     <description>WebJar for Octicons</description>
     <url>http://webjars.org</url>
@@ -48,7 +48,7 @@
         <url>http://github.com/webjars/octicons</url>
         <connection>scm:git:https://github.com/webjars/octicons.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/octicons.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>octicons-3.1.0</tag>
     </scm>
     
     <build>
@@ -81,11 +81,11 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}/octicons-${upstream.version}"/>
-                                <echo message="moving resources"/>
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}/octicons-${upstream.version}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/octicons-${upstream.version}"/>
+                                    <fileset dir="${project.build.directory}/octicons-${upstream.version}" />
                                 </move>
                             </target>
                         </configuration>
