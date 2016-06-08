@@ -11,14 +11,14 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>octicons</artifactId>
-    <version>3.5.1-SNAPSHOT</version>
+    <version>4.0.0-SNAPSHOT</version>
     <name>Octicons</name>
     <description>WebJar for Octicons</description>
     <url>http://webjars.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>3.5.0</upstream.version>
+        <upstream.version>4.0.0</upstream.version>
         <upstream.url>https://github.com/github/octicons</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
         <requirejs>
@@ -64,8 +64,8 @@
                             <goal>download-single</goal>
                         </goals>
                         <configuration>
-                            <url>https://github.com/github/octicons/releases/download/v${upstream.version}</url>
-                            <fromFile>octicons.zip</fromFile>
+                            <url>https://github.com/primer/octicons/archive</url>
+                            <fromFile>v${upstream.version}.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
                     </execution>
@@ -82,7 +82,7 @@
                         <configuration>
                             <target>
                                 <echo message="unzip archive" />
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}/octicons-${upstream.version}" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
                                     <fileset dir="${project.build.directory}/octicons-${upstream.version}" />
