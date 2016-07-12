@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>octicons</artifactId>
-    <version>4.2.1</version>
+    <version>4.3.0-SNAPSHOT</version>
     <name>Octicons</name>
     <description>WebJar for Octicons</description>
     <url>http://webjars.org</url>
@@ -47,7 +47,7 @@
         <url>http://github.com/webjars/octicons</url>
         <connection>scm:git:https://github.com/webjars/octicons.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/octicons.git</developerConnection>
-        <tag>octicons-4.2.1</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <build>
